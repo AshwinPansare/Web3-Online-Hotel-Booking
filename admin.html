@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+			body {  
+				font-family: Calibri, Helvetica, sans-serif;  
+				background-color: #F9F4F4;  
+			}  
+            #topbar{
+                background-color: dodgerblue;
+                color: white;
+                height: 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            #topbar h2{
+                margin: 0 30px;
+            }
+            #topbar a{
+                margin: 0 10px;
+                padding: 10px;
+            }
+            #topbar a:link, #topbar a:visited{
+                color: white;
+                text-decoration: none;
+            }
+            #topbar a:hover{
+                background-color: black;
+                padding: 21px 10px;
+            }
+            .container{
+				text-align: center;
+            }
+			button{
+				padding: 20px;   
+                border: none; 
+				border-radius:8px;
+				background-color: #3cb371;  
+                color: white;
+                font-size: 20px;
+                font-weight: 500;
+                margin: 20px 0;
+			}  
+            button:hover{
+                opacity: 0.8;
+            }
+            #noroomstat{
+                background-color: red;
+                display: none;
+            }
+            #roominfo{
+                text-align: center;
+                margin: 50px;
+                font-size: 20px;
+                font-weight: 600;
+            }
+            #roominfo div{
+                margin: 20px 0;
+            }
+            #roomtab{
+                display: none;
+            }
+            table{
+                margin: 20px auto;
+            }
+            table, th, tr, td{
+                border: 3px solid black;
+                border-collapse: collapse;
+            }
+            th, td{
+                padding: 10px;
+            }
+            th{
+                font-size: 20px;
+            }
+            td{
+                font-size: 18px;
+            }
+            .available{
+                background-color: #46d599;
+                color: white;
+            }
+            .notavail{
+                background-color: #ff1834;
+                color: white;
+            }
+		</style>
+    </head>
+    <body>
+        <div id="topbar">
+            <h2 id="title2">Hotel booking</h2>
+            <a href="./index.html">Home</a>
+        </div>
+        <div id="roominfo">
+            <div id="totrooms"></div>
+            <div id="bookedrooms"></div>
+        </div>
+        <div class="container">
+            <button id="add">Add Room</button>
+            <p></p>
+            <button id="roomstat">Show Room status</button>
+            <button id="noroomstat">Close</button>
+        </div>
+        <div>
+            <table id="roomtab" style="width: 60%;">
+                <caption><h2>Rooms</h2></caption>
+                <tr>
+                    <th style="width: 40%;">Room Number</th>
+                    <th>Status</th>
+                </tr>
+            </table>
+        </div>
+        <script src="./app.js"></script>
+    </body>
+</html>
